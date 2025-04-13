@@ -866,12 +866,15 @@ img {
 
  @media screen and (max-width: 1157px) {
     .benefits-list {
-        gap: 72px;
+        margin: 0;
+        gap: 72px 24px;
+    }
+
+    .item-list {
+        min-width: 356px;
     }
  }
         
- 
-
 .title-benefits {
     margin-bottom: 8px;
 }
@@ -909,9 +912,6 @@ img {
         padding: 96px 16px;
     }
 
-    .benefits-list {
-        justify-content: space-between; 
-    }
 
     .text-benefits {
         justify-content: flex-start;
