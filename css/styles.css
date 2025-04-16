@@ -322,7 +322,7 @@ img {
 }
 
 .mob-nav:not(:last-child) {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .mob-current,
@@ -354,7 +354,7 @@ img {
     background-color: #4D5AE5;
 }
 
-.two {
+.social-links.two {
     display: flex;
     gap: 40px;
     margin-top: 48px;
@@ -890,7 +890,7 @@ img {
 @media screen and (min-width: 768px) {
 
     .benefits-item {
-        padding: 0;
+        padding: 96px 0;
     }
 
     .benefits-list {
@@ -903,9 +903,12 @@ img {
     .title-benefits,
     .text-benefits {
         text-align: left;
-        padding: 0;
         margin: 0;
         }
+
+    .title-benefits {
+        padding-bottom: 8px;
+    }
 
     .item-list {
         min-height: 100%;
@@ -981,34 +984,35 @@ img {
 }
 
 /*---------TEAM--------*/
+.container.container-team-all {
+    padding: 0 auto;
+}
 
 .team {
     background-color: #f4f4fd;
+    padding: 96px 0;
 
 }
 
 .title-team {
+    padding: 0;
     text-align: center;
-    padding-top: 96px;
     margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
 }
-
-        .title-team {
-            padding: 0;
-            text-align: center;
-            margin-bottom: 72px;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 1.11;
-            letter-spacing: 0.02em;
-        }
 
 .team-list {
     min-width: 264px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding-top: 0;
-    padding-bottom: 96px;
+    row-gap: 72px;
+ 
 }
 
 
@@ -1021,27 +1025,16 @@ img {
         0 1px 6px 0 rgba(46, 47, 66, 0.08);
     width: 264px;
     height: 428px;
+    
 }
 
-@media screen and (max-width: 767px) {
-    .foto:not(:last-child) {
-        margin-bottom: 72px;
-    }
-
-    .team-list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.container-team-all {
+    min-width: 264px;
+    border-radius: 0 0 4px 4px;
 }
 
 .container-team {
-    min-width: 264px;
-    padding: 32px 0;
-    border-radius: 0 0 4px 4px;
-   
-
+    padding: 32px 16px;
 }
 
 .icon {
@@ -1091,13 +1084,18 @@ img {
 @media screen and (min-width: 768px) {
     .team-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 64px 24px;
-        padding-bottom: 96px;
     }
 
-    .container-team {
+    .container-team-all {
         max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .container {
+        margin: 0 auto;
     }
 }
 
@@ -1109,6 +1107,7 @@ img {
 
     .team-list {
         padding: 0;
+        flex-wrap: nowrap;
     }
 
     .social-links .link:hover,
@@ -1122,11 +1121,11 @@ img {
         margin: 0;
     }
  
-    .container-team {
-        max-width: 1158px;
+    .container-team-all {
+        min-width: 1158px;
     }
 
-    .container.container-team {
+    .container.container-team-all {
         padding-top: 0 15px
     }
 }
@@ -1291,7 +1290,6 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
-    margin-bottom: 16px;
 }
 
 .footer-icon {
@@ -1378,7 +1376,7 @@ img {
     height: 40px;
     width: 165px;
     border-radius: 4px;
-    padding-left: 24px;
+    padding: 0 24px;
     background-color: #4d5ae5;
     border: none;
     font-weight: 500;
@@ -1393,7 +1391,6 @@ img {
 .footer-send-btn {
     fill: #fff;
     margin-left: 16px;
-    margin-right: 24px;
 }
 
 .footer-btn:hover,
@@ -1402,17 +1399,32 @@ img {
     background-color: #404BBF;
 }
 
+.social-links.two {
+    gap: 16px;
+    margin-top: 0;
+}
+
 @media screen and (min-width: 768px) {
+    .page-footer {
+        padding: 96px 0;
+    }
+
     .footer-item {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: baseline;
         gap: 72px 24px;
+        padding-left: 16px;
+        padding-right: 16px;     
+    }
+
+    .container.footer-item {
+        justify-content: flex-start;
+        padding: 0 108px;
     }
 
     .footer-form {
-        
         display: flex;
         flex-direction: row;
         gap: 24px;
@@ -1437,12 +1449,26 @@ img {
         justify-content: flex-start;
     }
 
-    
+    .social {
+        justify-content: flex-start;
+    }
+
 }
 
 @media screen and (min-width: 1158px) {
+    .page-footer {
+        padding: 100px 0;
+    }
+
     .footer-item {
         gap: 0;
+        display: flex;
+            align-items: baseline;
+            flex-wrap: nowrap;
+    }
+
+    .container.footer-item {
+        padding: 0 16px;
     }
 
     .footer-left {
